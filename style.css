@@ -25,6 +25,7 @@
     --espaco-md: 1.5rem;
     --espaco-lg: 2rem;
     --espaco-xxl: 6rem;
+    --espaco-xl: 3rem;
 
     /*BORDAS ARREDONDADAS*/
     --raio-sm: 0.5rem;
@@ -47,15 +48,14 @@ body{
     left: 0;
     width: 100%;
     z-index: 99999; /*posicionamento dos itens em camada Frente-Sobreposto*/
-    background-color: var(--cor-fundo);
-    opacity: 0.85;
     backdrop-filter: blur(12px); /*efeito do vidro opaco*/
     border-bottom: 1px solid var(--cor-borda);
+
 }
 
 .navbar-inner{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto; /*centraliza o elemento horizontalmente*/
@@ -265,23 +265,87 @@ body{
  
 }
 
-.sobre{
+.sobre {
     padding: var(--espaco-xxl) 0;
-   
 }
- 
-.sobre .container{
+
+.sobre .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* 1f 1f -> Duas colunas de tamanhos iguais */
+    /* 1fr 1fr -> Duas colunas de tamanhos iguais */
     gap: 4rem;
     align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
 }
-.sobre-texto span{
+
+.sobre-texto span {
     text-transform: uppercase;
-    color: var(--cor-principal);
+    color: var(--cor-primaria);
     font-weight: 700;
     letter-spacing: 2px;
+    margin-bottom: var(--espaco-sm);
+}
+
+.sobre-titulo {
+    font-size: clamp(1.75rem, 3rem, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--cor-texto);
     margin-bottom: var(--espaco-lg);
- 
+}
+
+.sobre-paragrafo {
+    font-size: 1.0625rem;
+    color: var(--cor-texto-suave);
+    line-height: 1.75;
+    margin-bottom: var(--espaco-md);
+}
+
+.sobre-pilares {
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-lg);
+    padding: var(--espaco-xl);
+}
+
+.sobre-pilares-titulo {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--cor-texto);
+    margin-bottom: var(--espaco-lg);
+
+}
+
+.pilares-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-md);
+}
+
+.pilar {
+    display: flex;
+    align-items: start;
+    gap: var(--espaco-sm);
+
+}
+
+.pilar-icone {
+    background-color: color-mix(in srgb, var(--cor-primaria) 10%, transparent);
+    padding: var(--espaco-xs);
+    border-radius: var(--raio-sm);
+}
+
+.pilar-titulo {
+    display: block;
+    font-weight: 600;
+    color: var(--cor-texto);
+    margin-bottom: 2px;
+}
+
+.pilar-descricao {
+    font-size: 0.875rem;
+    color: var(--cor-texto-suave);
+    line-height: 1.5;
 }
