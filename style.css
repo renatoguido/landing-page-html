@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*DECLARÇÕES DAS VARIÀVEIS CSS*/
+:root{
+    --cor-primaria: #004ac6;
+    --cor-primaria-hover: #003ea8;
+    --cor-fundo: #f8f9ff;
+    --cor-branca: #FFFFFF;
+    --cor-fundo-secundario: #EFF4FF;
+    --cor-texto: #0b1c0b;
+    --cor-texto-suave: #434655;
+    --cor-borda: #c3c6d7;
+
+    /*TIPOGRAFIA*/
+
+    --fonte-principal: 'Inter';
+
+    /*Espaçamentos*/
+    --espaco-xs: 0.5rem;
+    --espaco-sm: 1rem;
+    --espaco-md: 1.5rem;
+    --espaco-lg: 2rem;
+    --espaco-xxl: 6rem;
+
+    /*BORDAS ARREDONDADAS*/
+    --raio-sm: 0.5rem;
+    --raio-md: 0.75rem;
+    --raio-lg: 1rem;
+
+}
+
+body{
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.navbar{
+    /*fixa o elemento na tela*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999; /*posicionamento dos itens em camada Frente-Sobreposto*/
+    background-color: var(--cor-fundo);
+    opacity: 0.85;
+    backdrop-filter: blur(12px); /*efeito do vidro opaco*/
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.navbar-inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /*centraliza o elemento horizontalmente*/
+    padding: var(--espaco-sm) var(--espaco-lg);
+}
+
+.navbar-logo{
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    letter-spacing: -0.03rem;
+}
+
+.navbar-links{
+    display: flex;
+    list-style: none;
+    gap: var(--espaco-lg);
+}
+.navbar-links a{
+    text-decoration: none;
+    color: var(--cor-texto-suave);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    
+}
+
+.navbar-links a{
+    text-decoration: none;
+    color: var(--cor-texto-suave);
+    font-size: 0.9375rem;
+    font-weight: 550;
+    
+}
+
+.navbar-links a:hover{
+    color: var(--cor-primaria);
+}
+
+.navbar-buttons{
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-sm);
+
+}
+
+.navbar-button{
+    background-color: var(--cor-primaria);
+    border: none;
+    color: var(--cor-branca-);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 0.8rem 1.25rem;
+    border-radius: var(--raio-md);
+    cursor: pointer;
+    transition: all 0.1 ease;
+}
+
+.navbar-button:hover{
+    background-color: var(--cor-primaria-hover);
+    transform: scale(1.02);
+}
+
+.navbar-login-link{
+    text-decoration: none;
+    color: var(--cor-texto-suave);
+    font-weight: 550;
+    font-size: 0.9375rem;
+}
+
+.navbar-login-link:hover{
+    color: var(--cor-primaria-hover);
+}
+
+.hero{
+    /*vh - viewport height. 100vh = altura total de janela*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--espaco-lg) var(--espaco-xxl);
+}
+
+.hero-label{
+    display: inline-block;
+    /*background-color: #0049c657;*/
+    background-color: color-mix(in srgb, var(--cor-primaria) 20%, transparent);
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12rem;
+    padding: 0.375rem 1rem;
+    border-radius: var(--raio-lg);
+    margin-bottom: var(--espaco-lg);
+}
+
+.hero-titulo{
+    /*clamp (minimo, ideal, maximo) significa: widht: nunca menor que o minimo em telas pequenas
+    Tamanho ideal
+    Nunca maior que o maximo em telas grandes*/
+    font-size: clamp(2.5rem, 5.75rem, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--cor-texto);
+    max-width: 56rem;
+    text-align: center;
+    margin-bottom: var(--espaco-md);
+}
+
+.hero-titulo span{
+    color: var(--cor-primaria);
+}
+
+.hero-subtitulo{
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: var(--cor-texto-suave);
+    max-width: 42rem;
+    line-height: 1.7;
+    margin-bottom: var(--espaco-xl);
+    text-align: center;
+}
+
+.hero-botoes {
+    display: flex;
+    gap: var(--espaco-sm);
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: var(--espaco-xxl);
+}
+
+ 
+.btn-funcionalidades {
+ 
+    background-color: var(--cor-primaria);
+    border: none;
+    color: var(--cor-branca);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 1rem 1.25rem;
+    border-radius: var(--raio-md);
+    cursor: pointer; /*Mãozinha aparecendo no botão*/
+    transition: all 0.15s ease;
+ 
+}
+ 
+.btn-saiba-mais {
+ 
+    background-color: var(--cor-branca);
+    border: none;
+    outline: 2px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 1rem 1.25rem;
+    border-radius: var(--raio-md);
+    cursor: pointer; /*Mãozinha aparecendo no botão*/
+    transition: all 0.15s ease;
+ 
+}
+ 
+ 
+.btn-funcionalidades:hover{
+    background-color: var(--cor-primaria-hover);
+    transform: scale(1.05);
+ }
+
+.btn-saiba-mais:hover{
+    background-color: color-mix(in srgb, var(--cor-primaria-hover) 20%, transparent);
+    transform: scale(1.00);
+ }
+
+.hero-estatisticas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--espaco-lg);
+    width: 100%;
+    max-width: 48rem;
+    padding-top: var(--espaco-lg);
+    border-top: 1px solid var(--cor-borda);
+}
+
+.hero-estatistica-item {
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espaco-xs);
+ 
+}
+ 
+.dados-numeros {
+ 
+    font-size: 2.5rem;
+    color: var(--cor-primaria);
+    font-weight: 700;
+    line-height: 1;
+ 
+}
+ 
+.dados-descricao {
+    font-size: 0.9375rem;
+    color: var(--cor-texto-suave);
+    font-weight: 500;
+ 
+}
+
+.sobre{
+    padding: var(--espaco-xxl) 0;
+   
+}
+ 
+.sobre .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 1f 1f -> Duas colunas de tamanhos iguais */
+    gap: 4rem;
+    align-items: center;
+}
+.sobre-texto span{
+    text-transform: uppercase;
+    color: var(--cor-principal);
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: var(--espaco-lg);
+ 
+}
