@@ -418,3 +418,151 @@ body{
     color: var(--cor-text-suave);
     line-height: 1.7;
 }
+
+
+
+.contato {
+    background-color: var(--cor-fundo-secundario);
+    padding: var(--espaco-xxl) 0;
+}
+
+.contato-card{    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-lg);
+    align-items: start;
+}
+
+.contato-info{
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-radius: var(--raio-lg);
+    padding: var(--espaco-xl);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contato .container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--espaco-lg);
+}
+
+.contato-lista{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-md);
+}
+
+.contato-rodape{
+        font-size: 0.875rem;
+    opacity: 0.7;
+    margin-top: var(--espaco-xl);
+    padding-top: var(--espaco-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contato-form{
+    background-color: var(--cor-branca);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--raio-lg);
+    padding: var(--espaco-xl);
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-md);
+}
+
+.form-duplo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--espaco-md);
+}
+
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--cor-texto-suave);
+}
+
+.campo input, .campo textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--cor-borda);
+    padding: 0.75rem 0;
+    font-family: var(--fonte-principal);
+    font-size: 1rem;
+    color: var(--cor-texto);
+    background: transparent;
+    outline: none;
+    transition: border-color 0.2s;
+    resize: none;
+}
+
+.contato p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.btn--lg {
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+}
+.btn--primario {
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-color: var(--cor-primaria);
+}
+
+
+.footer {
+    background-color: #111827;
+    color: #9ca3af;
+    padding: var(--espaco-xl) 0;
+}
+
+.footer-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 var(--espaco-lg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--espaco-md);
+}
+
+.footer-logo {
+    font-size: 1.375rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.03em;
+}
+
+.nav-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--espaco-lg);
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
